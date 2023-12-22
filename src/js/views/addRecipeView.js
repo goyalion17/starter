@@ -43,4 +43,3 @@ class AddRecipeView extends View {
 }
 
 export default new AddRecipeView();
-alert('HACKED')

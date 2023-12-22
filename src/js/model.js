@@ -47,7 +47,7 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
 
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
-    console.log(data);
+    // console.log(data);
 
     state.search.results = data.data.recipes.map(rec => {
       return {
@@ -79,7 +79,7 @@ export const updateServings = function (newServings) {
     ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
     // newQt = olsQt * newServings / oldServings // 2 * 8 / 4 = 4
   });
-  console.log(state.recipe.ingredients);
+  // console.log(state.recipe.ingredients);
 
   state.recipe.servings = newServings;
 };
